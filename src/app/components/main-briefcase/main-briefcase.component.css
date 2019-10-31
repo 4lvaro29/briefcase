@@ -1,0 +1,44 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar {
+    background-image: url('../../images/avatar-final.jpg');
+    background-size: cover;
+    align-self: center;
+    height: 91px;
+    width: 91px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.my-name {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
+span {
+    align-self: center;
+    margin-top: 0.5em;
+    font-weight: lighter;
+    font-size: 2em;
+}
+
+.card-container{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  
