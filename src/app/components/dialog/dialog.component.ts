@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+//agregar FormField
 
 export interface DialogData {
   animal: string;
@@ -11,22 +12,22 @@ export interface DialogData {
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css']
 })
-export class DialogComponent implements OnInit {
-  
+export class DialogComponent {
 
   animal: string;
   name: string;
 
+  constructor(public dialogRef: MatDialogRef<DialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
-  constructor(public dialog: MatDialog) { }
 
-  openDialog(){
-    
-  }
-
-  ngOnInit(){
-
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }
+
+
+
+
 

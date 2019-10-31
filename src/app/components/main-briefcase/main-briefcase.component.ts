@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ThemePalette } from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 
-
+export interface DialogData {
+  animal: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-main-briefcase',
@@ -11,23 +14,25 @@ import { DialogComponent } from '../dialog/dialog.component';
   styleUrls: ['./main-briefcase.component.css']
 })
 export class MainBriefcaseComponent implements OnInit {
-  
   animal: string;
-  name: string;   
-  constructor(public dialog: MatDialog) { }
+  name: string;
+ 
+  constructor(public dialog: MatDialog){}
+    //  public dialogRef: MatDialogRef<DialogComponent>,
+    // @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
-  openDialog(){
-    const dialogRef = this.dialog.open(DialogComponent, {
-      height: '400px',
-      width: '600px',
-    });
     
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
-  }
-
+      openDialog(): void {
+        const dialogRef = this.dialog.open(DialogComponent, {
+          width: '250px',
+          data: {name: this.name, animal: this.animal}
+        });
+    
+        dialogRef.afterClosed().subscribe(result => {
+          console.log('The dialog was closed');
+          this.animal = result;
+        });
+      }
 
   ngOnInit() {
   }
