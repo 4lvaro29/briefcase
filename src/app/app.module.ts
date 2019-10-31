@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MainBriefcaseComponent } from './components/main-briefcase/main-briefcase.component';
 import { WorksComponent } from './components/works/works.component';
@@ -11,6 +12,8 @@ import {
   MatIconModule,
   MatCardModule,
   MatChipsModule,
+  MatDialogModule,
+  MatFormFieldModule,
   MatChipList
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,27 +26,40 @@ import { faCoffee,
          faBriefcase
         } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { DialogComponent } from './components/dialog/dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainBriefcaseComponent,
-    WorksComponent
+    WorksComponent,
+    DialogComponent
     
   ],
+
+  entryComponents: [
+    DialogComponent
+  ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
     MatChipsModule,
     MatButtonModule,
+    MatDialogModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    MatFormFieldModule
+    
     
   ],
   exports: [
     MatCardModule,
     MatChipsModule,
-    MatButtonModule
+    MatDialogModule,
+    MatFormFieldModule,
+    DialogComponent
   ],
   
   providers: [],

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose} from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
-export interface ChipColor {
-  name: string;
-  color: ThemePalette;
-}
+
 
 @Component({
   selector: 'app-main-briefcase',
@@ -13,13 +12,22 @@ export interface ChipColor {
 })
 export class MainBriefcaseComponent implements OnInit {
   
-  availableColors: ChipColor[] = [
-    {name: 'none', color: 'primary'},
-    {name: 'Primary', color: 'primary'},
-    {name: 'Accent', color: 'primary'},
-    {name: 'Warn', color: 'primary'}
-  ];
-  constructor() { }
+  animal: string;
+  name: string;   
+  constructor(public dialog: MatDialog) { }
+
+  openDialog(){
+    const dialogRef = this.dialog.open(DialogComponent, {
+      height: '400px',
+      width: '600px',
+    });
+    
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
 
   ngOnInit() {
   }
