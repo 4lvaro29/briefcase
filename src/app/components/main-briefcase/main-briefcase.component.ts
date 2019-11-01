@@ -24,7 +24,7 @@ export class MainBriefcaseComponent implements OnInit {
     
       openDialog(): void {
         const dialogRef = this.dialog.open(DialogComponent, {
-          width: '250px',
+          width: '550px',
           data: {name: this.name, animal: this.animal}
         });
     
