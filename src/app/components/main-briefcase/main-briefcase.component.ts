@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ThemePalette } from '@angular/material';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose, MatDialogConfig} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 
 
@@ -24,15 +24,21 @@ export class MainBriefcaseComponent implements OnInit {
 
     
       openDialog(): void {
-        const dialogRef = this.dialog.open(DialogComponent, {
-          width: '550px',
-          data: {name: this.name, animal: this.animal}
-        });
+        const dialogConfig = new MatDialogConfig();
+        dialogConfig.autoFocus = true;
+        
+        this.dialog.open(DialogComponent, dialogConfig);
+        // const dialogRef = this.dialog.open(DialogComponent, {
+        //   width: '50%',
+       
+          
+        //   data: {name: this.name, animal: this.animal}
+        // });
     
-        dialogRef.afterClosed().subscribe(result => {
-          console.log('The dialog was closed');
-          this.animal = result;
-        });
+        // dialogRef.afterClosed().subscribe(result => {
+        //   console.log('The dialog was closed');
+        //   this.animal = result;
+        // });
       }
 
   ngOnInit() {

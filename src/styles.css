@@ -1,13 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Lexend+Mega|Roboto:100,300,400&display=swap');
+
 html{
     font-family: 'Roboto', sans-serif;
 }
 
 body {
-    margin: 14em;
-    background-color: grey;
+    margin: 0;
+    background-color: rgba(27, 20, 20, 0.219);
     box-sizing: border-box;
-    background-image: url(../src/app/images/R48J4HG.jpg);
+    /* background-image: url(../src/app/images/R48J4HG.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 

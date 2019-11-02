@@ -1,8 +1,10 @@
 
-.container {
+ .container {
     display: flex;
-    justify-content: center;
-}
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+} 
 
 .avatar {
     background-image: url('../../images/avatar-final.jpg');
@@ -25,8 +27,11 @@ mat-card-title {
 }
 
 .my-name {
+    font-family: 'Lexend Mega', sans-serif;
     margin-top: 1em;
 }
+
+
 
 span {
     align-self: center;
@@ -35,21 +40,25 @@ span {
 }
 
 .card-container{
-    max-width: 26%;
+   max-width: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 400px;
+    height: 350px;
+    
+  }
+
+ 
+.btn-row {
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-  }
+    
+}
 
-  .content {
-      width: 73%;
-      align-self: center;
-  }
-
-.btn-row button {
-    margin-right: 8px;
-    margin-left: 1em;
-  
+button {
+    margin-left: 8px;
 }
 
 .mat-card > :last-child:not(.mat-card-footer) {
@@ -58,5 +67,5 @@ span {
 }
 
 .mat-fab.mat-accent {
-    background-color: rgba(224, 203, 13, 0.938);
+    background-color: rgba(240, 240, 240, 0.993);
 }
