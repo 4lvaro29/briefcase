@@ -16,7 +16,9 @@ import {
   MatFormFieldModule,
   MatChipList,
   MatDialogRef,
-  MAT_DIALOG_DATA
+  MAT_DIALOG_DATA,
+  MatInputModule,
+  MatTooltipModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -52,7 +54,9 @@ import { DialogComponent } from './components/dialog/dialog.component';
     BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatTooltipModule
     
     
   ],

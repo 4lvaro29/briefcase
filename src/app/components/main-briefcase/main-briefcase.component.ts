@@ -3,6 +3,7 @@ import { ThemePalette } from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 
+
 export interface DialogData {
   animal: string;
   name: string;
