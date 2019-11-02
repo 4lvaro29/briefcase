@@ -24,21 +24,23 @@ export class MainBriefcaseComponent implements OnInit {
 
     
       openDialog(): void {
-        const dialogConfig = new MatDialogConfig();
-        dialogConfig.autoFocus = true;
-        
-        this.dialog.open(DialogComponent, dialogConfig);
-        // const dialogRef = this.dialog.open(DialogComponent, {
-        //   width: '50%',
-       
+        // const dialogConfig = new MatDialogConfig();
+        // dialogConfig.autoFocus = true;
+      
+        const dialogRef = this.dialog.open(DialogComponent, {
+          width: '50%',
+          height: '350px',
           
-        //   data: {name: this.name, animal: this.animal}
-        // });
+
+       
+          data: {name: this.name,
+          animal: this.animal}
+        });
     
-        // dialogRef.afterClosed().subscribe(result => {
-        //   console.log('The dialog was closed');
-        //   this.animal = result;
-        // });
+        dialogRef.afterClosed().subscribe(result => {
+          console.log('The dialog was closed');
+          this.animal = result;
+        });
       }
 
   ngOnInit() {
