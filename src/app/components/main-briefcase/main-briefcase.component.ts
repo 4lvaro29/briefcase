@@ -2,7 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { ThemePalette } from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose, MatDialogConfig} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
-
+import { trigger, transition, useAnimation } from '@angular/animations';
+import { bounce, flip } from 'ng-animate';
 
 export interface DialogData {
   animal: string;
@@ -12,28 +13,32 @@ export interface DialogData {
 @Component({
   selector: 'app-main-briefcase',
   templateUrl: './main-briefcase.component.html',
-  styleUrls: ['./main-briefcase.component.css']
+  styleUrls: ['./main-briefcase.component.css'],
+  animations: [trigger('bounce',
+              [transition('* => *', useAnimation(bounce,{params: {timing: 2, delay: 1}
+              }))]),
+  trigger('flip',[transition('* => *', useAnimation(flip,{params: {timing: 1, delay: 1}
+  }))])],
+
 })
 export class MainBriefcaseComponent implements OnInit {
   animal: string;
   name: string;
   isLinear = false;
+  animationState: 'void' | 'enter' | 'leave' = 'enter';
  
   constructor(public dialog: MatDialog){}
-    //  public dialogRef: MatDialogRef<DialogComponent>,
-    // @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
     
       openDialog(): void {
-        // const dialogConfig = new MatDialogConfig();
-        // dialogConfig.autoFocus = true;
-      
+       
         const dialogRef = this.dialog.open(DialogComponent, {
           width: '90%',
           height: 'auto',
-          
           data: {name: this.name,
-          animal: this.animal}
+          animal: this.animal
+          
+        }
+        
         });
     
         dialogRef.afterClosed().subscribe(result => {
@@ -44,5 +49,6 @@ export class MainBriefcaseComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

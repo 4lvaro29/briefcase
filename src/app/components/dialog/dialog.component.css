@@ -1,0 +1,31 @@
+.udp-universidad-logo {
+    background-image: url('../../images/udp.png');
+    background-size: cover;
+    align-self: center;
+    height: 35px;
+    width: 100px;    
+    flex-shrink: 0;
+    object-fit: cover;  
+}
+
+.programing-academy-logo {
+    background-image: url('../../images/desafio.jpeg');
+    background-size: cover;
+    height: 35px;
+    width: 100px; 
+
+}
+
+.kibernum-logo {
+    background-image: url('../../images/kibernum.png');
+    background-size: cover;
+    height: 35px;
+    width: 35px; 
+}
+
+.codeacademy-logo{
+    background-image: url('../../images/code.png');
+    background-size: cover;
+    height: 35px;
+    width: 166px; 
+}

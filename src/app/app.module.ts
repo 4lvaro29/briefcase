@@ -29,7 +29,8 @@ import { faCoffee,
          faEye,
          faClock,
          faGraduationCap,
-         faBriefcase
+         faBriefcase,
+         faEnvelope
         } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { DialogComponent } from './components/dialog/dialog.component';
@@ -83,5 +84,6 @@ export class AppModule {
     library.add(faClock);
     library.add(faGraduationCap);
     library.add(faBriefcase);
+    library.add(faEnvelope);
   }
  }

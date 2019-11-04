@@ -1,4 +1,5 @@
 
+ 
  .container {
     display: flex;
     flex-direction: column;
@@ -17,6 +18,12 @@
     object-fit: cover;  
 }
 
+.mat-mini-fab {
+    margin-left: 5.5em;
+    width: 35px;
+    height: 35px;
+}
+
 mat-card-title {
     align-self: center;
     
@@ -29,9 +36,21 @@ mat-card-title {
 .my-name {
     font-family: 'Lexend Mega', sans-serif;
     margin-top: 1em;
+    
 }
 
+.mat-divider {
+    display: block;
+    margin: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+ }
 
+mat-card-content{
+    align-self: center;
+    max-width: 50%;
+    font-size: 1rem;
+}
 
 span {
     align-self: center;
@@ -40,7 +59,7 @@ span {
 }
 
 .card-container{
-   max-width: 100vh;
+    max-width: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -49,11 +68,21 @@ span {
     
   }
 
+    /* .flex-container {
+    background-color: black;    
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    
+} */
+
  
 .btn-row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+
+display: flex;
+flex-flow: row wrap;
+justify-content: space-evenly;
     
 }
 
