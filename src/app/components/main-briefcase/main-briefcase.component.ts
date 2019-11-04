@@ -17,6 +17,7 @@ export interface DialogData {
 export class MainBriefcaseComponent implements OnInit {
   animal: string;
   name: string;
+  isLinear = false;
  
   constructor(public dialog: MatDialog){}
     //  public dialogRef: MatDialogRef<DialogComponent>,
@@ -28,11 +29,9 @@ export class MainBriefcaseComponent implements OnInit {
         // dialogConfig.autoFocus = true;
       
         const dialogRef = this.dialog.open(DialogComponent, {
-          width: '50%',
-          height: '350px',
+          width: '90%',
+          height: 'auto',
           
-
-       
           data: {name: this.name,
           animal: this.animal}
         });

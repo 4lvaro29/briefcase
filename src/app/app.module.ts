@@ -19,7 +19,8 @@ import {
   MAT_DIALOG_DATA,
   MatInputModule,
   MatTooltipModule,
-  MatDividerModule
+  MatDividerModule,
+  MatStepperModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -58,7 +59,9 @@ import { DialogComponent } from './components/dialog/dialog.component';
     MatFormFieldModule,
     MatInputModule,
     MatTooltipModule,
-    MatDividerModule
+    MatDividerModule,
+    MatStepperModule,
+    MatIconModule
     
     
   ],
