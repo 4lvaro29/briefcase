@@ -1,10 +1,23 @@
-
+/* background-image: url('../../images/giphy.gif');*/
  
+#background-index{
+    background-image: url('../../images/giphy.gif'); 
+    height: 1080px;
+    background-position: center;
+    background-repeat: repeat;
+    /* background-size: cover; */
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1em;
+    
 } 
 
 .avatar {
@@ -15,7 +28,8 @@
     width: 91px;
     border-radius: 50%;
     flex-shrink: 0;
-    object-fit: cover;  
+    object-fit: cover;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.84),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);  
 }
 
 .mat-mini-fab {
@@ -26,7 +40,16 @@
 
 mat-card-title {
     align-self: center;
+    color: white;
+    padding-left: 0.6em;
+    text-shadow: 1px 2px 3px #666;
     
+}
+
+
+.font-style-presentation{
+    /* background-color: violet; */
+    text-shadow: 1px 2px 3px #666;
 }
 
 .mat-card-title:not(:first-child) {
@@ -39,9 +62,12 @@ mat-card-title {
     
 }
 
-mat-divider {
-    max-width: 63%;
+mat-card .mat-divider-horizontal{
     margin-left: 3em;
+    background-color: white;
+    border-top-width: 3px;
+    width: 60%;
+    left: 39px;
  }
 .btn-separator {
     max-width: 63%;
@@ -51,6 +77,8 @@ mat-card-content{
     align-self: center;
     max-width: 50%;
     font-size: 1rem;
+    color:white;
+    font-weight: 400;
 }
 
 span {
@@ -89,6 +117,15 @@ margin-top: 1em;
 
 button {
     margin-left: 8px;
+}
+
+
+.mat-card {
+    background-image: url('../../images/back_1.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 5em;
+    
 }
 
 .mat-card > :last-child:not(.mat-card-footer) {

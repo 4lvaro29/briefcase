@@ -25,8 +25,7 @@ export interface DialogData {
 
 })
 export class MainBriefcaseComponent implements OnInit {
-  animal: string;
-  name: string;
+
   isLinear = false;
   animationState: 'void' | 'enter' | 'leave' = 'enter';
  
@@ -37,16 +36,13 @@ export class MainBriefcaseComponent implements OnInit {
         const dialogRef = this.dialog.open(DialogComponent, {
           width: '90%',
           height: 'auto',
-          data: {name: this.name,
-          animal: this.animal
-          
-        }
+      
         
         });
     
         dialogRef.afterClosed().subscribe(result => {
           console.log('The dialog was closed');
-          this.animal = result;
+          return result;
         });
       }
 

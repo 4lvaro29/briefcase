@@ -13,8 +13,8 @@ export interface DialogData {
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css'],
-  animations: [trigger('flipInY', [transition('* => *', useAnimation(flipInY))])
-  ],
+  // animations: [trigger('flipInY', [transition('* => *', useAnimation(flipInY))])
+  // ],
 })
 export class DialogComponent {
 
