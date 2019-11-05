@@ -1,0 +1,30 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-works {
+    font-weight: 100 ;
+}
+
+.image-row-works{
+    font-display: flex;
+    flex-direction: row;
+}
+
+.abeja-image{
+    background-image: url('../../images/envase_abeja_final.jpg');
+    max-width: 35%;
+    height: 500px;
+    background-size: cover;
+
+}
+
+.abeja-image2{
+    background-image: url('../../images/envase2_abeja_negra.jpg');
+    max-width: 35%;
+    height: 500px;
+    background-size: cover;
+    align-self: flex-end;
+
+}

@@ -17,8 +17,8 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-     {path: '', component: MainBriefcaseComponent},
-     {path: 'app-works', component: WorksComponent},
+     {path: '', component: MainBriefcaseComponent,data:{animation:'isLeft'}},
+     {path: 'app-works', component: WorksComponent, data: {animation:'isRight'}},
 
     ])
   ],

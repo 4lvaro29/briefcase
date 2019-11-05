@@ -6,15 +6,14 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+/* body {
     margin: -1em;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(27, 20, 20, 0.219);
     box-sizing: border-box;
+    text-align: center;
+    position: relative;
     
-    /* background-repeat: repeat;
-    background-position: center */
-    /*   */
-}
+} */
 
