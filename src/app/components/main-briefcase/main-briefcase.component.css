@@ -39,13 +39,14 @@ mat-card-title {
     
 }
 
-.mat-divider {
-    display: block;
-    margin: 0;
-    border-top-width: 1px;
-    border-top-style: solid;
+mat-divider {
+    max-width: 63%;
+    margin-left: 3em;
  }
-
+.btn-separator {
+    max-width: 63%;
+    margin-left: 4.5em;
+}
 mat-card-content{
     align-self: center;
     max-width: 50%;
@@ -79,10 +80,10 @@ span {
 
  
 .btn-row {
-
 display: flex;
 flex-flow: row wrap;
 justify-content: space-evenly;
+margin-top: 1em;
     
 }
 

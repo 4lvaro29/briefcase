@@ -9,11 +9,11 @@
   <button mat-button (click)="onNoClick()">No Thanks</button>
   <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
 </div> -->
-
+<!-- <div  class="hey-rick"></div>  -->
 <mat-vertical-stepper [linear]="isLinear" #stepper>
   <ng-template matStepperIcon="edit">
       <mat-icon>school</mat-icon>
-    </ng-template>
+    </ng-template>  
     <mat-step>
       <ng-template matStepLabel> Universidad
         <div class="udp-universidad-logo"></div>
@@ -40,6 +40,7 @@
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
     </mat-step>
+    
     <mat-step>
         <ng-template matStepLabel> Cursos
           <div class="codeacademy-logo"></div>

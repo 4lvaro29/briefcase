@@ -3,7 +3,7 @@ import { ThemePalette } from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose, MatDialogConfig} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { trigger, transition, useAnimation } from '@angular/animations';
-import { bounce, flip } from 'ng-animate';
+import { bounce, flip, zoomInLeft } from 'ng-animate';
 
 export interface DialogData {
   animal: string;
@@ -17,8 +17,11 @@ export interface DialogData {
   animations: [trigger('bounce',
               [transition('* => *', useAnimation(bounce,{params: {timing: 2, delay: 1}
               }))]),
-  trigger('flip',[transition('* => *', useAnimation(flip,{params: {timing: 1, delay: 1}
-  }))])],
+              trigger('flip',[transition('* => *', useAnimation(flip,{params: {timing: 1, delay: 2}
+              }))]),
+              trigger('zoomInLeft',[transition('* => *', useAnimation(zoomInLeft
+              ))])
+],
 
 })
 export class MainBriefcaseComponent implements OnInit {
