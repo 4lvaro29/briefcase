@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -34,6 +35,7 @@ import { faCoffee,
         } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { HttpClient } from 'selenium-webdriver/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
   
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatCardModule,
     MatChipsModule,
@@ -62,9 +65,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
     MatTooltipModule,
     MatDividerModule,
     MatStepperModule,
-    MatIconModule
-    
-    
+    MatIconModule,
+     
   ],
   exports: [
     MatCardModule,

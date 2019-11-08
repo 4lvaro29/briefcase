@@ -1,5 +1,4 @@
-<div class="flex">
-    <div [@routeAnimations]="prepareRoute(outlet)">
-        <router-outlet class="flex" #outlet="outlet" ></router-outlet>
-    </div> 
+
+<div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet" ></router-outlet>
 </div>

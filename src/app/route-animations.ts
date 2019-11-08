@@ -13,6 +13,7 @@ export const fader =
             query(':enter, :leave',[ 
                 
                 style({
+                
                     position: 'absolute',
                     left: 0,
                     width: '100%',
