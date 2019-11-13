@@ -2,18 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lexend+Mega|Roboto:100,300,400&display=swap');
 
-html{
+html, body{
     font-family: 'Roboto', sans-serif;
 }
 
-/* body {
-    margin: -1em;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(27, 20, 20, 0.219);
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
+
+ body {
+   
     
-} */
+} 
 
