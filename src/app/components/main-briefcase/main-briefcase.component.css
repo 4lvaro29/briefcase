@@ -1,16 +1,4 @@
  
-/* #background-index{
-    background-image: url('../../images/giphy.gif'); 
-    height: 1080px;
-    background-position: center;
-    background-repeat: repeat;
-    /* background-size: cover; 
-    position: relative;
-    margin: 0;
-    padding: 0;
-} */
-
-
  .container {
     display: flex;
     flex-direction: column;
@@ -96,16 +84,7 @@ span {
     
   }
 
-    /* .flex-container {
-    background-color: black;    
-    display: flex;
-    width: 100%;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    
-} */
 
- 
 .btn-row {
 display: flex;
 flex-flow: row wrap;

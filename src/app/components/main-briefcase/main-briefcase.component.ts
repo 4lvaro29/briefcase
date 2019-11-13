@@ -27,7 +27,7 @@ export interface DialogData {
 export class MainBriefcaseComponent implements OnInit {
 
   isLinear = false;
-  animationState: 'void' | 'enter' | 'leave' = 'enter';
+  // animationState: 'void' | 'enter' | 'leave' = 'enter';
  
   constructor(public dialog: MatDialog){}
     

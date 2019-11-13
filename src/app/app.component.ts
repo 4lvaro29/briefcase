@@ -2,6 +2,9 @@ import { Component, OnInit}  from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { fader } from './route-animations';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-root',
@@ -19,14 +22,9 @@ export class AppComponent implements OnInit {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 
-  ngOnInit(): void {
+  ngOnInit(){
     
-    this.http.get('/api/status').subscribe(data =>{
-      console.log("AAAAAAAAAAAAAAAA") 
-      this.apiStatus = data.json().data
-       
-    });
-    
+ 
   }
 }
 

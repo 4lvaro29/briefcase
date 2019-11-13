@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {WorksService} from '../../services/works.service'
+import { HttpClient } from '@angular/common/http';
+import { API_URL } from 'src/app/services/config';
+
 
 @Component({
   selector: 'app-works',
@@ -7,10 +11,17 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class WorksComponent implements OnInit {
+  public api_url:string=API_URL;
 
-  constructor() { }
+  
+  
+  constructor(private worksService: WorksService,
+    private http: HttpClient) { }
 
   ngOnInit() {
+    
   }
+
+  
 
 }

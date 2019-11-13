@@ -21,7 +21,8 @@ import {
   MatInputModule,
   MatTooltipModule,
   MatDividerModule,
-  MatStepperModule
+  MatStepperModule,
+  MatTabsModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -36,6 +37,8 @@ import { faCoffee,
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { HttpClient } from 'selenium-webdriver/http';
+import { WorksService } from './services/works.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +69,7 @@ import { HttpClient } from 'selenium-webdriver/http';
     MatDividerModule,
     MatStepperModule,
     MatIconModule,
+    MatTabsModule
      
   ],
   exports: [
@@ -76,7 +80,7 @@ import { HttpClient } from 'selenium-webdriver/http';
     DialogComponent
   ],
   
-  providers: [{ provide: MatDialogRef, useValue: {} }, { provide: MAT_DIALOG_DATA, useValue: [] }],
+  providers: [{ provide: MatDialogRef, useValue: {} }, { provide: MAT_DIALOG_DATA, useValue: [] }, {provide: WorksService}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
