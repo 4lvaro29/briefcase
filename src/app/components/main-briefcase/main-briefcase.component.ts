@@ -2,42 +2,36 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { ThemePalette } from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose, MatDialogConfig} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
-import { trigger, transition, useAnimation } from '@angular/animations';
-import { bounce, flip, zoomInLeft } from 'ng-animate';
+import { trigger, transition, useAnimation, state } from '@angular/animations';
+import { bounce } from 'ng-animate';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+
+
 
 @Component({
   selector: 'app-main-briefcase',
   templateUrl: './main-briefcase.component.html',
   styleUrls: ['./main-briefcase.component.css'],
-  animations: [trigger('bounce',
-              [transition('* => *', useAnimation(bounce,{params: {timing: 2, delay: 1}
-              }))]),
-              trigger('flip',[transition('* => *', useAnimation(flip,{params: {timing: 1, delay: 2}
-              }))]),
-              trigger('zoomInLeft',[transition('* => *', useAnimation(zoomInLeft
-              ))])
+  animations: [
+    trigger('bounce', [transition('* => *', useAnimation(bounce, {
+      // Set the duration to 5seconds and delay to 2seconds
+      params: { timing: 1, delay: 1 }
+    }))])
 ],
 
 })
 export class MainBriefcaseComponent implements OnInit {
-
+  bounce: any;
+  turnOff= false;
   isLinear = false;
-  // animationState: 'void' | 'enter' | 'leave' = 'enter';
+  animationState: 'void' | 'enter' | 'leave' = 'enter';
  
   constructor(public dialog: MatDialog){}
-    
-      openDialog(): void {
-       
+  
+      openDialog(): void {    
         const dialogRef = this.dialog.open(DialogComponent, {
           width: '90%',
           height: 'auto',
-      
-        
         });
     
         dialogRef.afterClosed().subscribe(result => {
@@ -47,7 +41,9 @@ export class MainBriefcaseComponent implements OnInit {
       }
 
   ngOnInit() {
+    
   }
+
 
 
 }

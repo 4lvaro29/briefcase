@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -24,20 +25,16 @@ import {
   MatStepperModule,
   MatTabsModule
 } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCoffee,
-         faEdit,
-         faEye,
-         faClock,
-         faGraduationCap,
-         faBriefcase,
-         faEnvelope
+import { faGraduationCap,
+         faArrowLeft,
+         faExchangeAlt
         } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { WorksService } from './services/works.service';
+
 
 @NgModule({
   declarations: [
@@ -54,13 +51,13 @@ import { WorksService } from './services/works.service';
   
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     MatCardModule,
     MatChipsModule,
     MatButtonModule,
     MatDialogModule,
-    BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule,
     MatFormFieldModule,
@@ -85,11 +82,8 @@ import { WorksService } from './services/works.service';
 })
 export class AppModule {
   constructor(){
-    library.add(faCoffee);
-    library.add(faEye);
-    library.add(faClock);
     library.add(faGraduationCap);
-    library.add(faBriefcase);
-    library.add(faEnvelope);
+    library.add(faArrowLeft);
+    library.add(faExchangeAlt);
   }
  }

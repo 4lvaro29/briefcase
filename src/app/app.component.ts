@@ -1,6 +1,6 @@
 import { Component, OnInit}  from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { fader } from './route-animations';
+import { fader, slideInAnimation } from './route-animations';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -11,7 +11,10 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [
-  fader,  ]
+  // fader,
+  slideInAnimation
+  
+  ]
 })
 export class AppComponent implements OnInit {
   
