@@ -20,8 +20,6 @@
 }
 
 .mat-mini-fab {
-    width: 35px;
-    height: 35px;
     transform: none;
     cursor: pointer;
 }
@@ -67,7 +65,6 @@ mat-card .mat-divider-horizontal{
 }
 mat-card-content{
     align-self: center;
-    max-width: 50%;
     font-size: 1rem;
     color:white;
     font-weight: 400;
@@ -95,7 +92,7 @@ span {
 
   .btn-row {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row no-wrap;
   justify-content: space-evenly;
   margin-top: 1em;
       
@@ -124,7 +121,7 @@ span {
 
   }
 
-  /*Flip test */
+  /*Flip */
 
 
 .flex-container {
@@ -153,41 +150,50 @@ span {
 
 }
 
-
-
 .flippable-card mat-card {
   margin: 0;
   display: block;
   position: absolute;
-  width: 252px;
-  height: 222px;
+  width: -webkit-fill-available;
+  width:-moz-available;
+  height: 100%;
   backface-visibility: hidden;
   
 }
 
 .flippable-card .front {
   background-image: url('../../images/back_1.jpg');
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: 324.7px;
+  background-repeat: no-repeat;
   padding: 1em;
   display: flex;
   flex-direction: column;
-  height: auto;
-
+  background-color: rgba(0,0,0,.04);
+  z-index: -1;
 }
+
+
+.mat-card-subtitle {
+  align-self: center;
+  color: white;
+  font-weight: bold;
+}
+
+.mat-card-subtitle:not(:first-child), .mat-card-title:not(:first-child) {
+  margin-top: 0;
+}
+
 .flippable-card .back {
   background-image: url('../../images/colors.jpg');
   background-position: center;
-  background-size: cover;
+  background-size: 364px;
   transform: rotateY( 180deg );
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .flippable-card.flipped {
-
   transform: rotateY( 180deg );
-
 }
