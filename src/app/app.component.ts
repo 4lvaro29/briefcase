@@ -11,8 +11,8 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [
-  // fader,
-  slideInAnimation
+  fader,
+  // slideInAnimation
   
   ]
 })
@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   apiStatus: string
   constructor(private http: HttpClient){}
   title = 'alvaro-test';
+  
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }

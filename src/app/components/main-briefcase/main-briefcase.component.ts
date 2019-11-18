@@ -22,7 +22,8 @@ import { bounce } from 'ng-animate';
 })
 export class MainBriefcaseComponent implements OnInit {
   bounce: any;
-  turnOff= false;
+  flipped= false;
+  avatar = ''
   isLinear = false;
   animationState: 'void' | 'enter' | 'leave' = 'enter';
  
@@ -44,6 +45,9 @@ export class MainBriefcaseComponent implements OnInit {
     
   }
 
+  flipIt(){
+    this.flipped = !this.flipped;
+  }
 
 
 }

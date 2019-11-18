@@ -20,9 +20,10 @@
 }
 
 .mat-mini-fab {
-    margin-left: 5.5em;
     width: 35px;
     height: 35px;
+    transform: none;
+    cursor: pointer;
 }
 
 mat-card-title {
@@ -43,9 +44,9 @@ mat-card-title {
     text-shadow: 1px 2px 3px #666;
 }
 
-.mat-card-title:not(:first-child) {
+/* .mat-card-title:not(:first-child) {
     margin-top: 0.3em;
-}
+} */
 
 .my-name {
     font-family: 'Lexend Mega', sans-serif;
@@ -57,7 +58,7 @@ mat-card .mat-divider-horizontal{
     margin-left: 3em;
     background-color: white;
     border-top-width: 3px;
-    width: 60%;
+    width: 55%;
     left: 20px;
  }
 .btn-separator {
@@ -78,6 +79,8 @@ span {
     font-size: 2em;
 }
 
+/* Must be flip*/
+
 .card-container{
     max-width: 100vh;
     display: flex;
@@ -85,36 +88,106 @@ span {
     justify-content: space-evenly;
     max-width: 400px;
     height: 350px;
+
     
   }
 
 
-.btn-row {
-display: flex;
-flex-flow: row wrap;
-justify-content: space-evenly;
-margin-top: 1em;
-    
+  .btn-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 1em;
+      
+  }
+
+  button {
+      margin-left: 8px;
+  }
+
+
+  /* .mat-card {
+      background-image: url('../../images/back_1.jpg');
+      background-position: center;
+      background-size: cover;
+      padding: 1em;
+      
+  }
+
+  .mat-card > :last-child:not(.mat-card-footer) {
+      margin-bottom: 0;
+      align-self: center;
+  } */
+
+  .mat-fab.mat-accent {
+      background-color: rgba(240, 240, 240, 0.993);
+
+  }
+
+  /*Flip test */
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  
+}   
+
+.card-container {
+  width: 300px;
+  height: 270px;
+  position: relative;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+
 }
 
-button {
-    margin-left: 8px;
+.flippable-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+
 }
 
 
-.mat-card {
-    background-image: url('../../images/back_1.jpg');
-    background-position: center;
-    background-size: cover;
-    padding: 1em;
-    
+
+.flippable-card mat-card {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 252px;
+  height: 222px;
+  backface-visibility: hidden;
+  
 }
 
-.mat-card > :last-child:not(.mat-card-footer) {
-    margin-bottom: 0;
-    align-self: center;
+.flippable-card .front {
+  background-image: url('../../images/back_1.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+}
+.flippable-card .back {
+  background-image: url('../../images/colors.jpg');
+  background-position: center;
+  background-size: cover;
+  transform: rotateY( 180deg );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
-.mat-fab.mat-accent {
-    background-color: rgba(240, 240, 240, 0.993);
+.flippable-card.flipped {
+
+  transform: rotateY( 180deg );
+
 }
