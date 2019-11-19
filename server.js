@@ -3,9 +3,9 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(__dirname+'/dist/app-alvarocv'));
+app.use(express.static(__dirname+'/dist/alvaro-test'));
 app.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/dist/app-alvarocv/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/alvaro-test/index.html'));
 });
 
 app.listen(process.env.PORT || 8080);
