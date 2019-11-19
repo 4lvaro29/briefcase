@@ -17,13 +17,15 @@ export interface DialogData {
   // ],
 })
 export class DialogComponent {
-
-  animal: string;
-  name: string;
+  isLinear = false;
 
   constructor(public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
+    ngOnInit(): void {
+      
+      
+    }
 
   onNoClick(): void {
     this.dialogRef.close();
