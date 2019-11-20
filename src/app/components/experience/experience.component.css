@@ -1,0 +1,16 @@
+.title-layout {
+    align-self: flex-start;
+}
+
+.title-experiencie {
+    font-weight: 100 ;
+    font-size: 2rem;
+    margin:0;
+}
+
+.main-layout-experience {
+    display:flex;
+    flex-direction: column;
+    /* background-image: url(''); */
+
+}

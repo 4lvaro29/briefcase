@@ -10,7 +10,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 const routes: Routes = [
   { path: '', component: MainBriefcaseComponent, data:{animation:'HomePage'}},
   { path: 'app-works', component: WorksComponent,  data: {animation:'AboutPage'}},
-  {path: 'app-experience', component: ExperienceComponent, data: {animation:'AboutPage'}},
+  {path: 'app-experience', component: ExperienceComponent, data: {animation:'Test'}},
 ];
 
 @NgModule({

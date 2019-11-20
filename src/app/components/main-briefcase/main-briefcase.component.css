@@ -1,3 +1,12 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+  background-image: url('../../images/main-background.jpg');
+  background-size: 1920px;
+  height: 1000px;
+  width: 100%;
+  
+}  
 .container {
     display: flex;
     flex-direction: column;
@@ -5,7 +14,6 @@
     margin: 1em;
     
 } 
-
 .avatar {
     background-image: url('../../images/avatar-final.jpg');
     background-size: cover;
@@ -22,6 +30,9 @@
     transform: none;
     cursor: pointer;
 }
+.mini-flex{
+  align-self: center;
+}
 
 mat-card-title {
     align-self: center;
@@ -30,7 +41,6 @@ mat-card-title {
     text-shadow: 1px 2px 3px #666;
     
 }
-
 
 .flip {
     align-self: flex-end;
@@ -64,7 +74,7 @@ mat-card .mat-divider-horizontal{
 }
 mat-card-content{
     align-self: center;
-    font-size: 1rem;
+    font-size: 3rem;
     color:white;
     font-weight: 400;
 }
@@ -76,15 +86,17 @@ span {
 }
 
 /* Must be flip*/
-
+@media screen and (min-width: 600px){
   .btn-row {
-  display: flex;
-  flex-flow: row no-wrap;
-  justify-content: space-evenly;
-  margin-top: 1em;
-      
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    width: 100%;
+    margin-right:2.4em;
+   
   }
-
+}
   button {
       margin-left: 8px;
   }
@@ -107,15 +119,17 @@ span {
       background-color: rgba(240, 240, 240, 0.993);
 
   }
-
+@media screen and (min-width: 360px){
+  .btn-experience {
+      margin-left: 4em;
+  }
+}
+@media screen and (min-width: 600px){
+  .btn-experience {
+      margin-left: 0;
+  }
+} 
   /*Flip */
-
-
-.flex-container {
-  display: flex;
-  justify-content: center;
-  
-}   
 
 .card-container {
   max-width: 100vh;
@@ -158,11 +172,30 @@ span {
   padding: 1em;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0,0,0,.04);
+  background-color: #f4f4f9;
   z-index: -1;
 }
 
+@media screen and (min-width:360px){
+  .flippable-card .front{
+    height: 38em;
+    background-size: 177%;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0em;
+    padding: 0em;
 
+  }
+}
+@media screen and (min-width:360px){
+  .btn-row{
+   max-width: min-content;
+   align-self: flex-end;
+   margin-right: 0.4em;
+    
+  }
+}
 .mat-card-subtitle {
   align-self: center;
   color: white;
@@ -181,6 +214,7 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .flippable-card.flipped {
@@ -196,8 +230,8 @@ span {
 }
 @media screen and (min-width: 360px) {
   .avatar{
-   width: 70px;
-   height: 70px;
+   width: 90px;
+   height: 90px;
  }
 }
 @media screen and (min-width:600px){
@@ -218,6 +252,17 @@ span {
   display: flex;
   justify-content: space-evenly;
 
+  }
+}
+@media screen and (min-width:360px){
+  .flippable-card .back{
+    height: 38em;
+    background-size: 177%;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0em;
+    padding: 0em;
   }
 }
 @media screen and (min-width:600px){
