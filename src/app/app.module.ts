@@ -33,7 +33,11 @@ import { faGraduationCap,
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { HttpClient } from 'selenium-webdriver/http';
+// import { WorksService } from './services/works.service';
+import { ExperienceComponent } from './components/experience/experience.component';
 import { WorksService } from './services/works.service';
+import { SkillsComponent } from './components/skills/skills.component';
+
 
 
 @NgModule({
@@ -41,12 +45,17 @@ import { WorksService } from './services/works.service';
     AppComponent,
     MainBriefcaseComponent,
     WorksComponent,
-    DialogComponent
+    DialogComponent,
+    ExperienceComponent,
+    SkillsComponent,
+    
     
   ],
 
   entryComponents: [
-    DialogComponent
+    DialogComponent,
+    ExperienceComponent,
+    SkillsComponent
   ],
   
   imports: [
@@ -78,7 +87,8 @@ import { WorksService } from './services/works.service';
   ],
   
   providers: [{ provide: MatDialogRef, useValue: {} }, { provide: MAT_DIALOG_DATA, useValue: [] }, {provide: WorksService}],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule {
   constructor(){

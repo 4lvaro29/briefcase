@@ -4,7 +4,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogClose, MatDialogConfi
 import { DialogComponent } from '../dialog/dialog.component';
 import { trigger, transition, useAnimation, state } from '@angular/animations';
 import { bounce } from 'ng-animate';
-
+import { ExperienceComponent } from '../experience/experience.component';
+import { SkillsComponent } from '../skills/skills.component';
 
 
 
@@ -23,7 +24,6 @@ import { bounce } from 'ng-animate';
 export class MainBriefcaseComponent implements OnInit {
   bounce: any;
   flipped= false;
-  avatar = ''
   isLinear = false;
   animationState: 'void' | 'enter' | 'leave' = 'enter';
  
@@ -39,6 +39,14 @@ export class MainBriefcaseComponent implements OnInit {
           console.log('The dialog was closed');
           return result;
         });
+      }
+
+      openSkills(): void{
+        const dialogConfig = new MatDialogConfig();
+        
+        dialogConfig.autoFocus = true;
+
+        this.dialog.open(SkillsComponent, dialogConfig);
       }
 
   ngOnInit() {

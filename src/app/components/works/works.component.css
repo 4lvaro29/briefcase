@@ -37,6 +37,12 @@
     background-position: center;
 }
 
+
+.abeja-logo .responsive {
+    width: 100%;
+    height: auto;
+}
+
 /* .abeja-logo-small-size{
     background-image: url('../../images/logo-abeja.jpg');
     height: 500px;
