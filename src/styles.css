@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Lexend+Mega|Roboto:100,300,400&display=swap');
+@import "../node_modules/normalize.css/normalize.css";
 
 html, body{
     font-family: 'Roboto', sans-serif;

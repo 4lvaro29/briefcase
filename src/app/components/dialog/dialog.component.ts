@@ -3,6 +3,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogConfig} from '@angula
 import {MatFormFieldModule} from '@angular/material'
 import { trigger, transition, useAnimation } from '@angular/animations';
 import { flipInY } from 'ng-animate';
+import { slideInAnimation } from 'src/app/route-animations';
 
 export interface DialogData {
   animal: string;
@@ -13,8 +14,8 @@ export interface DialogData {
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css'],
-  // animations: [trigger('flipInY', [transition('* => *', useAnimation(flipInY))])
-  // ],
+  animations:[slideInAnimation,]
+  
 })
 export class DialogComponent {
   isLinear = false;
