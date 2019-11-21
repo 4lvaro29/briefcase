@@ -6,7 +6,7 @@ import { trigger, transition, useAnimation, state } from '@angular/animations';
 import { bounce } from 'ng-animate';
 import { ExperienceComponent } from '../experience/experience.component';
 import { SkillsComponent } from '../skills/skills.component';
-
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 
 
 @Component({
@@ -27,7 +27,8 @@ export class MainBriefcaseComponent implements OnInit {
   isLinear = false;
   animationState: 'void' | 'enter' | 'leave' = 'enter';
  
-  constructor(public dialog: MatDialog){}
+  constructor(public dialog: MatDialog,
+    private _bottomSheet: MatBottomSheet){}
   
       openDialog(): void {    
         const dialogRef = this.dialog.open(DialogComponent, {
@@ -41,13 +42,13 @@ export class MainBriefcaseComponent implements OnInit {
         });
       }
 
-      openSkills(): void{
-        const dialogConfig = new MatDialogConfig();
+      // openSkills(): void{
+      //   const dialogConfig = new MatDialogConfig();
         
-        dialogConfig.autoFocus = true;
+      //   dialogConfig.autoFocus = true;
 
-        this.dialog.open(SkillsComponent, dialogConfig);
-      }
+      //   this.dialog.open(SkillsComponent, dialogConfig);
+      // }
 
   ngOnInit() {
     
@@ -56,6 +57,13 @@ export class MainBriefcaseComponent implements OnInit {
   flipIt(){
     this.flipped = !this.flipped;
   }
-
-
+  openSkills(): void {
+    this._bottomSheet.open(SkillsComponent);
+  }
+  
 }
+
+
+
+
+

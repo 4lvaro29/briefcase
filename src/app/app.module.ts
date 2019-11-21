@@ -23,8 +23,11 @@ import {
   MatTooltipModule,
   MatDividerModule,
   MatStepperModule,
-  MatTabsModule
-} from '@angular/material';
+  MatTabsModule,
+  MatBottomSheetModule,
+  MatNavList,
+  MatListModule
+}from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGraduationCap,
          faArrowLeft,
@@ -37,9 +40,6 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { WorksService } from './services/works.service';
 import { SkillsComponent } from './components/skills/skills.component';
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,17 +47,13 @@ import { SkillsComponent } from './components/skills/skills.component';
     WorksComponent,
     DialogComponent,
     ExperienceComponent,
-    SkillsComponent,
-    
-    
+    SkillsComponent,    
   ],
-
   entryComponents: [
     DialogComponent,
     ExperienceComponent,
     SkillsComponent
   ],
-  
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -75,8 +71,9 @@ import { SkillsComponent } from './components/skills/skills.component';
     MatDividerModule,
     MatStepperModule,
     MatIconModule,
-    MatTabsModule
-     
+    MatTabsModule,
+    MatBottomSheetModule,
+    MatListModule
   ],
   exports: [
     MatCardModule,
@@ -85,9 +82,11 @@ import { SkillsComponent } from './components/skills/skills.component';
     MatFormFieldModule,
     DialogComponent
   ],
-  
-  providers: [{ provide: MatDialogRef, useValue: {} }, { provide: MAT_DIALOG_DATA, useValue: [] }, {provide: WorksService}],
-  bootstrap: [AppComponent],
+  providers: [
+    { provide: MatDialogRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue:[] },
+    {provide: WorksService}],
+    bootstrap: [AppComponent],
   
 })
 export class AppModule {
