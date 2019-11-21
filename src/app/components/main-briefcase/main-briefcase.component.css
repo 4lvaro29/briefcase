@@ -1,10 +1,13 @@
 .flex-container {
   display: flex;
-  justify-content: center;
-  background-image: url('../../images/main-background.jpg');
+  flex-direction: column;
+  align-items: center;
+  /* background-image: url('../../images/main-background.jpg');
   background-size: 1920px;
-  height: 1000px;
+  height: 1000px; */
   width: 100%;
+  background-image:linear-gradient(to right ,#ad5389,#3c1053);
+  height: 1080px;
   
 }  
 .container {
@@ -24,14 +27,6 @@
     flex-shrink: 0;
     object-fit: cover;
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.84),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);  
-}
-
-.mat-mini-fab {
-    transform: none;
-    cursor: pointer;
-}
-.mini-flex{
-  align-self: center;
 }
 
 mat-card-title {
@@ -110,6 +105,20 @@ span {
 
   }
 
+  .mat-mini-fab{
+    transform: none;
+    cursor: pointer;
+    background-color: #3c1053;
+    color: #ffffff61;
+    align-self: center;
+    font-size: 2rem;
+    width:80px;
+    height: 80px;
+    position: absolute;
+    z-index: 1;
+
+  }
+
   /*Flip */
 
 .card-container {
@@ -127,10 +136,15 @@ span {
 
 .flippable-card {
   width: 100%;
-  height: 100%;
+  height: 75%;
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0em;
+  padding: 0;
 
 }
 
@@ -145,32 +159,31 @@ span {
   
 }
 
+
 .flippable-card .front {
-  background-image: url('../../images/back_1.jpg');
-  background-position: top;
-  background-size: 324.7px;
-  background-repeat: no-repeat;
+  /* background-image: url('../../images/light-blue-fur-texture.jpg'); */
+  background-image: url('../../images/back1.jpg');
+  background-size: cover;
   padding: 1em;
   display: flex;
   flex-direction: column;
-  background-color: #f4f4f9;
   z-index: -1;
 }
 
-
-
+.front {
+  background-image:linear-gradient(to left, #2980b9,#2c3e50);
+}
 .mat-card-subtitle {
   align-self: center;
   color: white;
   font-weight: bold;
 }
-
 .mat-card-subtitle:not(:first-child), .mat-card-title:not(:first-child) {
   margin-top: 0;
 }
 
 .flippable-card .back {
-  background-image: url('../../images/colors.jpg');
+  background-image: url('../../images/neon.jpg');
   background-position: center;
   background-size: 364px;
   transform: rotateY( 180deg );
@@ -230,7 +243,7 @@ span {
 @media screen and (min-width:360px){
   .flippable-card .front{
     height: 38em;
-    background-size: 177%;
+    background-size: 100%;
     background-position: center;
     display: flex;
     justify-content: space-evenly;
@@ -262,12 +275,18 @@ span {
 @media screen and (min-width:360px){
   .flippable-card .back{
     height: 38em;
-    background-size: 177%;
+    background-size: 100%;
     background-position: center;
     display: flex;
     justify-content: space-evenly;
     margin: 0em;
     padding: 0em;
+  }
+}
+@media screen and (min-width:360px){
+  .mat-fab-mini{
+    width: 20px;
+    height: auto;
   }
 }
 @media screen and (min-width:600px){

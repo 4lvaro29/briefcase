@@ -1,9 +1,9 @@
 <div class="flex-container">
-  <div class='card-container'>
-    <div class='flippable-card' [ngClass]="{'flipped':flipped}">
-      <button mat-mini-fab class="mini-flex" (click)="flipIt()" color='accent'>
+    <button mat-mini-fab (click)="flipIt()" color='accent'>
         <fa-icon icon="exchange-alt"></fa-icon>
       </button>
+  <div class='card-container'>
+    <div class='flippable-card' [ngClass]="{'flipped':flipped}">
       <mat-card class='front'>
           <div class="avatar"></div>
         <mat-card-title>Alvaro Urbina Prieto</mat-card-title>

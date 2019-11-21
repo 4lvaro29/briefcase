@@ -3,9 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lexend+Mega|Roboto:100,300,400&display=swap');
 @import "../node_modules/normalize.css/normalize.css";
 
+
 html, body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
