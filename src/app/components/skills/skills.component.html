@@ -1,22 +1,28 @@
     <mat-nav-list>
+        <mat-icon matListIcon>git</mat-icon>
+      <h2>Skills</h2>
         <a href="https://keep.google.com/" mat-list-item (click)="openLink($event)">
-           <div class="github">Github
-            <span mat-line>Repositorios</span>
-         </div>
+          <img matListAvatar [src]="githubIcon" alt="githublogo">
+           
+            <span mat-line>Git</span>
+    
         </a>
       
         <a href="https://docs.google.com/" mat-list-item (click)="openLink($event)">
+          <img matListAvatar [src]="angularIcon" alt="angularicon">
           <span mat-line>Angular</span>
           <span mat-line>Javascript</span>
           <span mat-line>Typecript</span>
         </a>
       
         <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
+          <img matListAvatar [src]="railsIcon" alt="">
           <span mat-line>Rails</span>
           <span mat-line>Ruby</span>
         </a>
       
         <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)">
+          <img matListAvatar [src]="cssIcon" alt="">
           <span mat-line>Flexbox</span>
           <span mat-line>Bootstrap</span>
           <span mat-line>SCSS</span>
