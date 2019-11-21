@@ -94,5 +94,7 @@ export class AppModule {
     library.add(faGraduationCap);
     library.add(faArrowLeft);
     library.add(faExchangeAlt);
+    
+   
   }
  }

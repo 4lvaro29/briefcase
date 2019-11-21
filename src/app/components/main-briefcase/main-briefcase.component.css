@@ -6,7 +6,7 @@
   background-size: 1920px;
   height: 1000px; */
   width: 100%;
-  background-image:linear-gradient(to right ,#ad5389,#3c1053);
+  background-image:linear-gradient(to top ,#ad5389,#3c1053);
   height: 1080px;
   
 }  
@@ -101,7 +101,7 @@ span {
   } */
 
   .mat-fab.mat-accent {
-      background-color: rgba(240, 240, 240, 0.993);
+      background-color: rgba(168, 124, 216, 0.08);
 
   }
 
@@ -186,7 +186,7 @@ span {
 
 .flippable-card .front {
   /* background-image: url('../../images/light-blue-fur-texture.jpg'); */
-  background-image: url('../../images/back1.jpg');
+  /* background-image: url('../../images/back1.jpg'); */
   background-size: cover;
   padding: 1em;
   display: flex;
@@ -195,7 +195,7 @@ span {
 }
 
 .front {
-  background-image:linear-gradient(to left, #2980b9,#2c3e50);
+  background-image:linear-gradient(to left, #41295a,#2F0743);
 }
 .mat-card-subtitle {
   align-self: center;
