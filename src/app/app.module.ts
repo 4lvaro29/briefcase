@@ -40,6 +40,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { WorksService } from './services/works.service';
 import { SkillsComponent } from './components/skills/skills.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { SkillsComponent } from './components/skills/skills.component';
     MatIconModule,
     MatTabsModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    NgImageSliderModule
   ],
   exports: [
     MatCardModule,
