@@ -8,18 +8,19 @@
     <h5>Ventures</h5> 
   </div>  
   <mat-tab-group>
+      <mat-tab label="UX/UI">
+      
+        </mat-tab>
     <mat-tab label="Abeja negra">
         <p>Pyme enfocada en brindar una experiencia de diversos sabores en sus mieles y un packaging similar a las cervezas artesanales</p>
-        <div class="img-column">
-        <img class="abeja-logo responsive">
-        <img class="only-label responsive">
-        <img class="abeja-image2 responsive">
-        <img class="abeja-image responsive">
+        <div class="img-column-layout">
+        <img [src]="abejaNegraLogo" alt="abeja_negra" class="responsive left-location">
+        <span>Logo</span>
+        <img [src]="envaseAbeja" alt="envase_abeja" class="responsive right-location">
+      
       </div>
     </mat-tab>
-    <mat-tab label="Ux">
-      
-    </mat-tab>
+    
     <mat-tab label="Labelled">
       
     </mat-tab>

@@ -29,18 +29,31 @@
     flex-direction: row;
 }
 
+
+
+.img-column-layout{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+
+}
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.right-location {
+  align-self: flex-end;
+}
+
 .abeja-logo {
     background-image: url('../../images/logo.png');
     height: 500px;
     background-size: 408px;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-
-.abeja-logo .responsive {
-    width: 100%;
-    height: auto;
 }
 
 /* .abeja-logo-small-size{

@@ -12,6 +12,8 @@ import { API_URL } from 'src/app/services/config';
 })
 export class WorksComponent implements OnInit {
   public api_url:string=API_URL;
+  public abejaNegraLogo = "https://4lvaro.s3.amazonaws.com/book/logo.png";
+  public envaseAbeja = "https://4lvaro.s3.amazonaws.com/book/envase2_abeja_negra.jpg";
 
   
   
