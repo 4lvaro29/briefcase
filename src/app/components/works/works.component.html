@@ -1,39 +1,36 @@
 <div class="main-background-works">
-<button mat-fab routerLink=""
-        routerLinkActive="active">
-  <fa-icon icon="arrow-left"></fa-icon>
-</button>
-<h1 class="title-works">Book</h1>
-  <div class="content "> 
-    <h5>Ventures</h5> 
-  </div>  
+  <button mat-fab routerLink=""
+          routerLinkActive="active">
+    <fa-icon icon="arrow-left"></fa-icon>
+  </button>
+    <h1 class="title-works">Book</h1>
+    <div class="content "> 
+     <h5>Ventures</h5> 
+    </div>  
   <mat-tab-group>
-      <mat-tab label="UX/UI">
+    <mat-tab label="UX/UI">
+    <ng-image-slider 
+    [images]="uxUiWorks"
+    [imageSize]="{width: sliderImageWidth, height: sliderImageHeight}"
+    #nav>
+    </ng-image-slider>
+  </mat-tab>
+    <mat-tab label="Responsive">
         <ng-image-slider 
-        [images]="uxUiWorks"
-        [imageSize]="{width: sliderImageWidth, height: sliderImageHeight}"
+        [images]="responsiveWorks"
+        [imageSize]="{width: 300, height: 553}"
         #nav>
         </ng-image-slider>
-      </mat-tab>
-
-        <mat-tab label="Responsive">
-            <ng-image-slider 
-            [images]="responsiveWorks"
-            [imageSize]="{width: 300, height: 553}"
-            #nav>
-            </ng-image-slider>
-        </mat-tab>
-        <mat-tab label="Abeja negra">
-          <p>Pyme enfocada en brindar una experiencia de diversos sabores en sus mieles y un packaging similar a las cervezas artesanales</p>
-          <ng-image-slider 
-            [images]="brandWorks"
-            #nav>
-            </ng-image-slider>
     </mat-tab>
-    
-    
-    <mat-tab label="Packaging">
-      
-    </mat-tab>
+    <mat-tab label="Ads and Brands">
+      <div class="content-flex">
+        <p>Pyme enfocada en brindar una experiencia de diversos sabores en sus mieles y un packaging similar al de las cervezas artesanales</p>
+      </div>
+      <ng-image-slider 
+        [images]="brandWorks"
+        [imageSize]="{width: 400, height: 353}"
+        #nav>
+        </ng-image-slider>
+  </mat-tab>
   </mat-tab-group>
 </div>

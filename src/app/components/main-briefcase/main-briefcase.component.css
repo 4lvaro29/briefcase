@@ -103,15 +103,15 @@ span {
   } */
 
   .mat-fab.mat-accent {
-      background-color: rgba(199, 18, 129, 0.23);
-
+      /* background-color: rgba(17, 50, 84, 0.49); */
+      background-image:linear-gradient(to top, #42275a,#734b6d);
   }
 
   .mat-mini-fab{
     margin-top: 0.3em;
     transform: none;
     cursor: pointer;
-    background-color: #3c1053;
+    background-color: rgba(17, 50, 84, 0.49);
     color: #ffffff61;
     align-self: center;
     font-size: 2rem;

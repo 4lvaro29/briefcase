@@ -11,6 +11,11 @@
     margin:0;
 }
 
+.content-flex {
+  display: flex;
+  justify-content: center;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -18,7 +23,10 @@
     align-items: center;
 }
 
- 
+ng-image-slider {
+  display: flex;
+  justify-content: center;
+}
     ::ng-deep .mat-tab-labels{
     display: flex;
     justify-content: center;
@@ -42,53 +50,4 @@
   width: 100%;
   max-width: 400px;
   height: auto;
-}
-
-.right-location {
-  align-self: flex-end;
-}
-
-.abeja-logo {
-    background-image: url('../../images/logo.png');
-    height: 500px;
-    background-size: 408px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* .abeja-logo-small-size{
-    background-image: url('../../images/logo-abeja.jpg');
-    height: 500px;
-    background-size: 625px;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-
-.abeja-image{
-    background-image: url('../../images/envase_abeja_final.jpg');
-    height: 606px;
-    background-size: 771px;
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
-
-.abeja-image2{
-    background-image: url('../../images/envase2_abeja_negra.jpg');
-    height: 500px;
-    background-size: 500px;
-    padding: 11em;
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
-
-.only-label{
-    background-image: url('../../images/label-presentation.jpg');
-    height: 336px;
-    background-size: 1071px;
-    padding: 11em;
-    background-repeat: no-repeat;
-    background-position: center;
-
 }

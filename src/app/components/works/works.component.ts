@@ -12,9 +12,8 @@ import { API_URL } from 'src/app/services/config';
 })
 export class WorksComponent implements OnInit {
   public api_url:string=API_URL;
-  public sliderImageWidth: Number = 450;
-  public sliderImageHeight: Number = 300;
-  
+  public sliderImageWidth: Number = 550;
+  public sliderImageHeight: Number = 400;
 
   uxUiWorks: Array<object> = [{
     video: 'https://4lvaro.s3.amazonaws.com/book/rebuild/rebuild-final.mp4',
@@ -26,10 +25,10 @@ export class WorksComponent implements OnInit {
     alt: 'login',
     title: 'Rebuild Login'
 }, {
-    image: 'https://4lvaro.s3.amazonaws.com/book/rebuild/Signup.png', // Support base64 image
-    thumbImage: 'https://4lvaro.s3.amazonaws.com/book/rebuild/Signup.png', // Support base64 image
-    title: 'Signup', //Optional: You can use this key if want to show image with title
-    alt: 'Signup' //Optional: You can use this key if want to show image with alt
+    image: 'https://4lvaro.s3.amazonaws.com/book/rebuild/Signup.png', 
+    thumbImage: 'https://4lvaro.s3.amazonaws.com/book/rebuild/Signup.png', 
+    title: 'Signup',
+    alt: 'Signup'
 },{
   image: 'https://4lvaro.s3.amazonaws.com/book/rebuild/index-materiales.png',
   thumbImage: 'https://4lvaro.s3.amazonaws.com/book/rebuild/index-materiales.png',
@@ -38,7 +37,7 @@ export class WorksComponent implements OnInit {
 },{
   image: 'https://4lvaro.s3.amazonaws.com/book/rebuild/lista+de+obras+y+su+info+%2B+reserva.png',
   thumbImage: 'https://4lvaro.s3.amazonaws.com/book/rebuild/lista+de+obras+y+su+info+%2B+reserva.png',
-  title: 'Obras',
+  title: 'List proyects',
   alt:'lista'
 },{
   image:'https://4lvaro.s3.amazonaws.com/book/rebuild/Busqueda+autocompletada.png',
@@ -112,8 +111,12 @@ responsiveWorks: Array<object> = [{
 
 ];
 
-brandWorks:Array<object>=[
-  {
+brandWorks:Array<object>=[{
+    image:'https://4lvaro.s3.amazonaws.com/book/MockUp_ABEJA_NEGRA.jpg',
+    thumbImage:'https://4lvaro.s3.amazonaws.com/book/MockUp_ABEJA_NEGRA.jpg',
+    title: 'Abeja negra logo',
+    alt:'Logo'
+},{
     image:'https://4lvaro.s3.amazonaws.com/book/logo.png',
     thumbImage:'https://4lvaro.s3.amazonaws.com/book/logo.png',
     title: 'Abeja negra logo',
