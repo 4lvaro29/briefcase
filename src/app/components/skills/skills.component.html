@@ -1,26 +1,23 @@
-    <mat-nav-list>
-        <mat-icon matListIcon>git</mat-icon>
-      <h2>Skills</h2>
+<div class="row">
+  <h2>Skills</h2> 
+  <button (click)="show = !show">{{show ? 'Stack' : 'Adobe'}}</button>
+  </div>
+    <mat-nav-list *ngIf="show; else adobe">
         <a href="https://keep.google.com/" mat-list-item (click)="openLink($event)">
           <img matListAvatar [src]="githubIcon" alt="githublogo">
-           
             <span mat-line>Git</span>
-    
-        </a>
-      
+          </a>
         <a href="https://docs.google.com/" mat-list-item (click)="openLink($event)">
           <img matListAvatar [src]="angularIcon" alt="angularicon">
           <span mat-line>Angular</span>
           <span mat-line>Javascript</span>
-          <span mat-line>Typecript</span>
+          <span mat-line>Typescript</span>
         </a>
-      
         <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
           <img matListAvatar [src]="railsIcon" alt="">
           <span mat-line>Rails</span>
           <span mat-line>Ruby</span>
         </a>
-      
         <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)">
           <img matListAvatar [src]="cssIcon" alt="">
           <span mat-line>Flexbox</span>
@@ -29,4 +26,28 @@
           <span mat-line>CSS</span>
         </a>
       </mat-nav-list>
+    <ng-template #adobe>
+      <mat-nav-list>
+        <a href="https://keep.google.com/" mat-list-item (click)="openLink($event)">
+          <img matListAvatar [src]="illustrator" alt="githublogo">
+          <span mat-line>Illustrator</span>
+        </a>
+        <a href="https://docs.google.com/" mat-list-item (click)="openLink($event)">
+          <img matListAvatar [src]="xd" alt="angularicon">
+          <span mat-line>Xd</span>
+        </a>
+        <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)">
+          <img matListAvatar [src]="figma" alt="">
+          <span mat-line>Figma</span>
+        </a>
+        <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
+          <img matListAvatar [src]="photoshop" alt="">
+          <span mat-line>Photoshop</span>
+        </a>
       
+        <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)">
+          <img matListAvatar [src]="spark" alt="">
+          <span mat-line>Spark</span>
+        </a>
+    </mat-nav-list>
+  </ng-template>

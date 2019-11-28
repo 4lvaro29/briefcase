@@ -20,8 +20,9 @@
     
 } 
 .avatar {
-    background-image: url('../../images/avatar-final.jpg');
+    background-image: url('https://4lvaro.s3.amazonaws.com/avatar_aws.png');
     background-size: cover;
+    background-repeat: no-repeat;
     align-self: center;
     height: 91px;
     width: 91px;
@@ -106,6 +107,7 @@ span {
       /* background-color: rgba(17, 50, 84, 0.49); */
       background-image:linear-gradient(to top, #42275a,#734b6d);
   }
+  
 
   .mat-mini-fab{
     margin-top: 0.3em;
