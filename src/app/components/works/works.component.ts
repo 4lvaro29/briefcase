@@ -12,8 +12,8 @@ import { API_URL } from 'src/app/services/config';
 })
 export class WorksComponent implements OnInit {
   public api_url:string=API_URL;
-  public sliderImageWidth: Number = 550;
-  public sliderImageHeight: Number = 400;
+  public sliderImageWidth: Number = 395;
+  public sliderImageHeight: Number = 350;
 
   uxUiWorks: Array<object> = [{
     video: 'https://4lvaro.s3.amazonaws.com/book/rebuild/rebuild-final.mp4',

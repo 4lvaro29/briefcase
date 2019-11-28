@@ -1,9 +1,9 @@
 <div class="row">
   <h2>Skills</h2> 
-  <button (click)="show = !show">{{show ? 'Stack' : 'Adobe'}}</button>
+  <button mat-raised-button (click)="show = !show">{{show ? 'Stack' : 'Adobe'}}</button>
   </div>
     <mat-nav-list *ngIf="show; else adobe">
-        <a href="https://keep.google.com/" mat-list-item (click)="openLink($event)">
+        <a href="https://github.com/4lvaro29/briefcase" mat-list-item (click)="openLink($event)">
           <img matListAvatar [src]="githubIcon" alt="githublogo">
             <span mat-line>Git</span>
           </a>

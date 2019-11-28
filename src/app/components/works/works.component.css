@@ -37,8 +37,6 @@ ng-image-slider {
     flex-direction: row;
 }
 
-
-
 .img-column-layout{
     display: flex;
     flex: 1 1 auto;
