@@ -35,14 +35,20 @@
 
 .column-timeline {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin: 1em;
 }
 
-.text-box {
+/* .text-box {
   margin: 1em;
+  padding-left: 1em;
+} */
+
+mat-card {
+  align-self: flex-start;
+  margin-left: 3.5em;
 }
 
 .codelco {
