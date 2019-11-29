@@ -1,4 +1,11 @@
 .row {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.switch {
+    margin: 1em;
+    cursor: pointer;
+    
 }

@@ -49,3 +49,7 @@ ng-image-slider {
   max-width: 400px;
   height: auto;
 }
+
+::ng-deep .mat-tab-body.mat-tab-body-active{
+  margin-top: 2em;
+}

@@ -23,10 +23,9 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet'
 })
 export class MainBriefcaseComponent implements OnInit {
   bounce: any;
-  flipped= true;
+  flipped= false;
   isLinear = false;
   animationState: 'void' | 'enter' | 'leave' = 'enter';
-  public show =true;
   constructor(public dialog: MatDialog,
     private _bottomSheet: MatBottomSheet){}
   
@@ -57,6 +56,7 @@ export class MainBriefcaseComponent implements OnInit {
   flipIt(){
     this.flipped = !this.flipped;
   }
+  
   openSkills(): void {
     
     this._bottomSheet.open(SkillsComponent);

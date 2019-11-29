@@ -1,6 +1,8 @@
 <div class="row">
   <h2>Skills</h2> 
-  <button mat-raised-button (click)="show = !show">{{show ? 'Stack' : 'Adobe'}}</button>
+  <button mat-mini-fab>
+      <fa-icon class ="switch" icon="exchange-alt" (click)="show = !show"></fa-icon>
+  </button>
   </div>
     <mat-nav-list *ngIf="show; else adobe">
         <a href="https://github.com/4lvaro29/briefcase" mat-list-item (click)="openLink($event)">
@@ -44,7 +46,6 @@
           <img matListAvatar [src]="photoshop" alt="">
           <span mat-line>Photoshop</span>
         </a>
-      
         <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)">
           <img matListAvatar [src]="spark" alt="">
           <span mat-line>Spark</span>
