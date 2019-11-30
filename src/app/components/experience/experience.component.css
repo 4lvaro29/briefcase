@@ -1,3 +1,8 @@
+.main-experience-layout {
+  margin: 1em;
+}
+
+
 .title-layout {
   align-self: flex-start;
 }
@@ -49,6 +54,7 @@
 mat-card {
   align-self: flex-start;
   margin-left: 3.5em;
+ 
 }
 
 .codelco {
