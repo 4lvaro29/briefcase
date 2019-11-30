@@ -1,7 +1,6 @@
 .main-experience-layout {
-  margin: 1em;
+  margin: 0.3rem;
 }
-
 
 .title-layout {
   align-self: flex-start;
@@ -21,7 +20,7 @@
 
   @media screen and (min-width:360px){
     .vl{
-        height: 300px;
+        height: 400px;
     }
   }
 
@@ -46,18 +45,19 @@
   margin: 1em;
 }
 
-/* .text-box {
-  margin: 1em;
-  padding-left: 1em;
-} */
-
 mat-card {
   align-self: flex-start;
-  margin-left: 3.5em;
-  
-  
- 
+  margin-left: 3.5em; 
 }
+
+#triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+
 
 .codelco {
   width: 35px;
