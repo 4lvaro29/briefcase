@@ -26,7 +26,8 @@ import {
   MatTabsModule,
   MatBottomSheetModule,
   MatNavList,
-  MatListModule
+  MatListModule,
+  MatProgressSpinnerModule
 }from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGraduationCap,
@@ -41,6 +42,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { WorksService } from './services/works.service';
 import { SkillsComponent } from './components/skills/skills.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { LottieAnimationViewModule } from 'ng-lottie';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +77,9 @@ import { NgImageSliderModule } from 'ng-image-slider';
     MatTabsModule,
     MatBottomSheetModule,
     MatListModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    LottieAnimationViewModule.forRoot(),
+    MatProgressSpinnerModule
   ],
   exports: [
     MatCardModule,

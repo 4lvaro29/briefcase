@@ -6,16 +6,16 @@
   align-self: flex-start;
 }
 
-.title-experiencie {
+ .title-experiencie {
   font-weight: 100 ;
   font-size: 2rem;
   margin:1em;
 }
 
 .vl {
-    border-left: 3px solid #3e69ea9e;
+    border-left: 2px solid #969ba99e;
     height: 150px;
-    margin: 2em;
+    margin: 0.5em;
   }
 
   @media screen and (min-width:360px){
@@ -46,21 +46,53 @@
 }
 
 mat-card {
-  align-self: flex-start;
-  margin-left: 3.5em; 
+  align-self: center;
+  margin-left: 3.5em;
+  margin: 0;
 }
 
 #triangle-left {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-right: 100px solid red;
-  border-bottom: 50px solid transparent;
+  border-top: 50px solid
+  transparent;
+  border-right: 100px solid
+  #e7ddddd9;
+  border-bottom: 50px solid
+  transparent;
+  z-index: -1;
+  position: absolute;
+  margin: 7em;
+  width: 6em;
+
 }
 
+.tree-branch{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.codelco {
-  width: 35px;
-  height: 35px;
+.text-box-container-flex{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+}
+
+.point-design {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-text {
+  margin-top: 16px;
+  color: white;
 }
