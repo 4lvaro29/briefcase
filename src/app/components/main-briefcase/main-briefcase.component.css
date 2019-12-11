@@ -11,6 +11,15 @@
   
 }
 
+fa-icon:not(.not-touch) {
+  color: #301332a3;
+  background: -webkit-linear-gradient(#9c47fc, #356ad2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -81,6 +90,10 @@ span {
   .mat-fab.mat-accent {   
     background-image:linear-gradient(to top, #42275a,#734b6d);   
   }
+
+  .mat-fab.mat-accent.btn-back {
+    background-image: linear-gradient(to top, #140c1b,#734b6d);
+  }
   
   .mat-mini-fab{
     margin-top: 0.3em;
@@ -98,7 +111,7 @@ span {
 
   }
 
-  .mat-mini-fab:after {
+  /* .mat-mini-fab:after {
   content: "";
   background: rgba(218, 45, 118, 0.2),0 6px 10px 0 rgba(229, 41, 217, 0.97),0 1px 18px 0 rgba(210, 32, 199, 0.12);
   display: block;
@@ -111,7 +124,7 @@ span {
   box-shadow:  0 3px 5px -1px rgba(218, 45, 118, 0.2),0 6px 10px 0 rgba(229, 41, 217, 0.97),0 1px 18px 0 rgba(210, 32, 199, 0.12);
   transition: all 0.5s;
   
-  }
+  } */
 
   .mat-mini-fab:active:after {
     padding: 0;
@@ -248,6 +261,7 @@ span {
   height: 500px;
   display: flex;
   justify-content: space-evenly;
+  height: 38em;
 
   }
 }

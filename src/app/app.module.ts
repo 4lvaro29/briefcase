@@ -32,9 +32,11 @@ import {
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGraduationCap,
          faArrowLeft,
-         faExchangeAlt
+         faExchangeAlt,
+         faBuilding,
+         faUserGraduate
         } from '@fortawesome/free-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { HttpClient } from 'selenium-webdriver/http';
 // import { WorksService } from './services/works.service';
@@ -97,7 +99,10 @@ import { LottieAnimationViewModule } from 'ng-lottie';
 })
 export class AppModule {
   constructor(){
+    library.add(faBuilding)
     library.add(faGraduationCap);
+    library.add(faUserGraduate)
+    dom.watch()
     library.add(faArrowLeft);
     library.add(faExchangeAlt);
     
