@@ -8,7 +8,6 @@ import { ExperienceComponent } from '../experience/experience.component';
 import { SkillsComponent } from '../skills/skills.component';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 
-
 @Component({
   selector: 'app-main-briefcase',
   templateUrl: './main-briefcase.component.html',
@@ -22,32 +21,35 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet'
 
 })
 export class MainBriefcaseComponent implements OnInit {
+ 
   bounce: any;
   flipped= false;
   isLinear = false;
   animationState: 'void' | 'enter' | 'leave' = 'enter';
   constructor(public dialog: MatDialog,
-    private _bottomSheet: MatBottomSheet){}
+    private _bottomSheet: MatBottomSheet){
+   
+  }
   
-      openDialog(): void {    
-        const dialogRef = this.dialog.open(DialogComponent, {
-          width: '90%',
-          height: 'auto',
-        });
+  openDialog(): void {    
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '90%',
+      height: 'auto',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      return result;
+    });
+  }
+
+  // openSkills(): void{
+  //   const dialogConfig = new MatDialogConfig();
     
-        dialogRef.afterClosed().subscribe(result => {
-          console.log('The dialog was closed');
-          return result;
-        });
-      }
+  //   dialogConfig.autoFocus = true;
 
-      // openSkills(): void{
-      //   const dialogConfig = new MatDialogConfig();
-        
-      //   dialogConfig.autoFocus = true;
-
-      //   this.dialog.open(SkillsComponent, dialogConfig);
-      // }
+  //   this.dialog.open(SkillsComponent, dialogConfig);
+  // }
 
   ngOnInit() {
     

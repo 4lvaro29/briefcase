@@ -45,6 +45,7 @@ import { WorksService } from './services/works.service';
 import { SkillsComponent } from './components/skills/skills.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { LottieAnimationViewModule } from 'ng-lottie';
+import { LoadingComponent } from './components/loading/loading.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,12 +53,14 @@ import { LottieAnimationViewModule } from 'ng-lottie';
     WorksComponent,
     DialogComponent,
     ExperienceComponent,
-    SkillsComponent,    
+    SkillsComponent,
+    LoadingComponent, 
   ],
   entryComponents: [
     DialogComponent,
     ExperienceComponent,
-    SkillsComponent
+    SkillsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -92,6 +95,7 @@ import { LottieAnimationViewModule } from 'ng-lottie';
   ],
   providers: [
     { provide: MatDialogRef, useValue: {} },
+    {provide: LoadingComponent, useValue: {}},
     { provide: MAT_DIALOG_DATA, useValue:[] },
     {provide: WorksService}],
     bootstrap: [AppComponent],
@@ -105,7 +109,6 @@ export class AppModule {
     dom.watch()
     library.add(faArrowLeft);
     library.add(faExchangeAlt);
-    
-   
   }
+  
  }
